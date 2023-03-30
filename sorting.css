@@ -1,0 +1,26 @@
+body{
+    background-color: rgba(0, 9, 20, 0.692);
+    color: #fff;
+    text-align: center;
+}
+
+.newArray {
+    position: absolute;
+}
+
+.sorting {
+    text-align: right;
+}
+
+#bars{
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    margin: 10px;
+}
+
+.bar {
+    width: 5px;
+    background-color: rgb(255, 230, 2);
+    margin: 0.1rem;
+}

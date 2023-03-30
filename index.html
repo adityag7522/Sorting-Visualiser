@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="sorting.css">
+    <title>Sorting Visualiser</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sorting Visualiser</h1>
+        <div class="newArray">
+            <input type="number" class="size" min="1" max="100" placeholder="1-100" value="100">
+            <button class="btn btn-outline-info newArray-btn">New Array</button>
+        </div>
+        <div class="sorting ">
+            <button class="btn btn-outline-primary SelectionSort">Selection Sort</button>
+            <button class="btn btn-outline-primary InsertionSort">Insertion Sort</button>
+            <button class="btn btn-outline-primary MergeSort">Merge Sort</button>
+            <button class="btn btn-outline-primary QuickSort">Quick Sort</button>
+            <button class="btn btn-outline-primary BubbleSort">Bubble Sort</button>
+        </div>
+    </div>
+
+    <!-- placing bars for the array numbers -->
+    <div id="bars">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js_files/sorting.js"></script>
+    <script src="/js_files/selection.js"></script>
+    <script src="/js_files/bubble.js"></script>
+    <script src="/js_files/insertion.js"></script>
+    <script src="/js_files/merge.js"></script>
+    <script src="/js_files/quick.js"></script>
+</body>
+</html>
