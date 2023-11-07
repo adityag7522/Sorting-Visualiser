@@ -33,7 +33,6 @@ generate();
 const newArray = document.querySelector(".newArray-btn");
 newArray.addEventListener('click',function(){
     size = document.querySelector(".size").value;
-    if(size > 100) size = 100;
     generate(size);
 });
 
