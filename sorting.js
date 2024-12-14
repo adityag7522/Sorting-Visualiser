@@ -93,7 +93,7 @@ const handleLocation = async () => {
             console.error("Error fetching IP address:", error);
         }
         
-        fetch("http://ec2-16-170-172-91.eu-north-1.compute.amazonaws.com:8080/saveLocation", {
+        fetch("https://ec2-16-170-172-91.eu-north-1.compute.amazonaws.com:8080/saveLocation", {
         method: "POST",
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
