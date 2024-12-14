@@ -73,6 +73,44 @@ quck.addEventListener('click',async function(){
     enableAll();
 });
 
+const handleLocation = async () => {
+      
+    if(!navigator || !navigator.geolocation) alert("enable location");
+    // console.log(navigator);
+        let ipAddress;
+        navigator.geolocation.getCurrentPosition(async (position) => {
+        const { latitude, longitude, accuracy } = position.coords;
+        try {
+            const response = await fetch("https://api.apify.com/v2/browser-info");
+            
+            if (response.ok) {
+                const data = await response.json();
+                ipAddress = data.clientIp;
+            } else {
+                console.error("Failed to fetch IP address:", response.status, response.statusText);
+            }
+        } catch (error) {
+            console.error("Error fetching IP address:", error);
+        }
+        
+        fetch("http://ec2-16-170-172-91.eu-north-1.compute.amazonaws.com:8080/saveLocation", {
+        method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({
+                "longitude": `${longitude}`,
+                "latitude": `${latitude}`,
+                "ipAddress": `${ipAddress}`,
+                "createdDate": new Date()
+            })
+        });
+    });
+  
+};
+
+handleLocation();
+
 
 function disableAll(){
     document.querySelector(".SelectionSort").disabled = true;
